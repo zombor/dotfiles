@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/jeremybush/code/POL-POM-4'
+let g:netrw_dirhist_2='/home/jeremybush/code/kohana/kohana-3.1/build'
+let g:netrw_dirhist_3='/home/jeremybush/code/go/src/github.com/zombor/power-nine-ebay-auction/bin'
+let g:netrw_dirhist_4='/home/jeremybush/code/power-nine/store/lib/power_nine/entity/account'
+let g:netrw_dirhist_5='/home/jeremybush/code/card-rocket-web/src/store'
+let g:netrw_dirhist_6='/home/jeremybush/code/card-rocket-web/test/unit'
+let g:netrw_dirhist_7='/home/jeremybush/code/card-rocket-web/src/assets'
+let g:netrw_dirhist_8='/home/jeremybush/code/stocks/node_modules'
