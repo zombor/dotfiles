@@ -16,3 +16,4 @@ ln -s ~/.dotfiles/.vim ~/.vim
 ln -s ~/.vim/.vimrc ~/.vimrc
 
 ln -s ~/.dotfiles/.i3 ~/.config/i3
+ln -s ~/.dotfiles/.polybar ~/.config/polybar
