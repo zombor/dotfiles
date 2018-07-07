@@ -49,6 +49,7 @@ filetype plugin on
 filetype indent on
 
 setlocal spell spelllang=en
+set nospell
 
 set winwidth=79
 
