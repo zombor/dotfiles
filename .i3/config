@@ -131,7 +131,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsym $mod+Shift+x exec i3lock --color "#ff0000"
+bindsym $mod+Shift+x exec i3lock --color "#000000"
+
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
+
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+bindsym XF86AudioMute exec amixer set Master toggle
 
 bar {
   position top
