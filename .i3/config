@@ -11,7 +11,7 @@
 
 set $mod Mod4
 
-font pango:DejaVu Sans Mono 10
+font pango:Anonymous Pro 16
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -136,6 +136,21 @@ bindsym $mod+Shift+x exec i3lock --color "#ff0000"
 bar {
   position top
   status_command i3status
+  font pango:Noto Mono 16
+
+  colors{
+    background #2d2d2d
+    separator #dcdcdc
+
+    focused_workspace  #d64937 #d64937 #2d2d2d
+    active_workspace   #2d2d2d #2d2d2d #dcdcdc
+    inactive_workspace #2d2d2d #2d2d2d #dcdcdc
+    urgent_workspace   #2d2d2d #2d2d2d #dcdcdc
+  }
+
 }
+
+exec xinput set-prop 12 285 1
+exec xrandr --dpi 122
 
 exec compton -f
