@@ -17,5 +17,6 @@ ln -s ~/.vim/.vimrc ~/.vimrc
 
 ln -s ~/.dotfiles/.i3 ~/.config/i3
 ln -s ~/.dotfiles/.polybar ~/.config/polybar
+ln -s ~/.dotfiles/.termite ~/.config/termite
 
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
