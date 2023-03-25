@@ -1,7 +1,10 @@
 [user]
-	name = Jeremy Bush
-	email = contractfrombelow@gmail.com
+  email = contractfrombelow@gmail.com
+  name = Jeremy Bush
+  signingkey = FECC8054713F3AD9
+[commit]
+  gpgsign = true
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+  branch = auto
+  diff = auto
+  status = auto

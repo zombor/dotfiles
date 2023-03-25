@@ -1,14 +1,17 @@
-call pathogen#infect()
-
-set background=dark
-"colorscheme solarized
-sy on
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
 
 set nocompatible                " choose no compatibility with legacy vi
+
+set background=dark
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
-filetype plugin indent on       " load file type plugins + indentation
+
+set loadplugins
+"let g:ledger_is_hledger=1
+"let b:is_hledger=1
+"let s:line_comment_chars=";"
 
 set number
 
@@ -45,9 +48,6 @@ set winheight=999
 set autowriteall
 set autoread
 
-filetype plugin on
-filetype indent on
-
 setlocal spell spelllang=en
 set nospell
 
@@ -60,18 +60,19 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <Leader>e <Plug>(go-rename)
+:set mouse=a
 
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_interfaces = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_fmt_command = "goimports"
+" Start NERDTree and leave the cursor in it.
+let g:NERDTreeWinPos = "right"
+autocmd VimEnter * NERDTree | wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-let g:netrw_dirhistmax=0
+" enable list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" list and pre-fill buffer for switching
+nnoremap <Leader>b :ls<CR>:b<Space>
+
+let g:go_imports_autosave = 1
+
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
