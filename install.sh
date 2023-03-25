@@ -1,5 +1,13 @@
 #!/usr/bin/env zsh
 
+if [[ $(uname) == "Linux" ]]; then
+  sudo pacman -S --noconfirm fzf
+else
+  rm -rf ~/.fzf
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install
+fi
+
 ZPREZTODIR="${ZDOTDIR:-$HOME}/.zprezto"
 
 if [ -d "${ZPREZTODIR}" ]; then
