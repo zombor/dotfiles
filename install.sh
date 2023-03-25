@@ -56,7 +56,9 @@ if [ -d "${HOME}/.vim/pack/ledger/start" ]; then
   git fetch origin
   git reset --hard origin/master
 else
-  git clone https://github.com/ledger/vim-ledger.git ~/.vim/pack/ledger/start
+  mkdir -p ~/.vim/pack/ledger/start
+  cd ~/.vim/pack/ledger/start
+  git clone https://github.com/ledger/vim-ledger.git
 fi
 
 rm -rf ${ZPREZTODIR}/contrib/fzf-tab && git clone https://github.com/Aloxaf/fzf-tab ${ZPREZTODIR}/contrib/fzf-tab

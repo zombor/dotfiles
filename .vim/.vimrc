@@ -1,7 +1,7 @@
+set nocompatible                " choose no compatibility with legacy vi
+
 unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
-
-set nocompatible                " choose no compatibility with legacy vi
 
 set background=dark
 syntax enable
